@@ -8,7 +8,7 @@
 
 My English is bad.  //Orz
 
-I'll write "Readme.md" and comment of code as well as I can.   //QAQ
+I'll write "README.md" and comment of code as well as I can.   //QAQ
 
 以后也许能用到，稍微修改即可（手动滑稽
 
@@ -24,11 +24,11 @@ I'll write "Readme.md" and comment of code as well as I can.   //QAQ
 
 √ Content-Type Preview
 
-√
-
 # Known Problems
 
-Encoding problem 返回乱码
+Encoding problem 返回乱码 （发送与接收的字符集格式化）
+
+命令中包含注释导致不执行
 
 # In Future
 
