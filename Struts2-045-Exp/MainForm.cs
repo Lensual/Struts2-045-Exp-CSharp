@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
+using System.Reflection;
 
 namespace Struts2_045_Exp
 {
@@ -144,6 +145,9 @@ namespace Struts2_045_Exp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Text += " " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
+            //init cmb_endcoding
             foreach (EncodingInfo enInfo in Encoding.GetEncodings())
             {
                 cmb_encoding.Items.Add(enInfo.Name);

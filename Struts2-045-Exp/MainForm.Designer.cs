@@ -207,6 +207,7 @@
             this.Controls.Add(this.txt_cmd);
             this.Controls.Add(this.txt_result);
             this.Controls.Add(this.txt_url);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "MainForm";
             this.Text = "Struts2-045-Exp 乁(๑˙ω˙๑乁)";
