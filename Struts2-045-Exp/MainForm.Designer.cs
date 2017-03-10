@@ -43,6 +43,7 @@
             this.rad_crlf = new System.Windows.Forms.RadioButton();
             this.rad_lf = new System.Windows.Forms.RadioButton();
             this.rad_cr = new System.Windows.Forms.RadioButton();
+            this.cmb_encoding = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txt_url
@@ -176,11 +177,22 @@
             this.rad_cr.Text = "CR";
             this.rad_cr.UseVisualStyleBackColor = true;
             // 
+            // cmb_encoding
+            // 
+            this.cmb_encoding.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_encoding.FormattingEnabled = true;
+            this.cmb_encoding.Location = new System.Drawing.Point(192, 295);
+            this.cmb_encoding.Name = "cmb_encoding";
+            this.cmb_encoding.Size = new System.Drawing.Size(121, 20);
+            this.cmb_encoding.Sorted = true;
+            this.cmb_encoding.TabIndex = 14;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 651);
+            this.Controls.Add(this.cmb_encoding);
             this.Controls.Add(this.rad_cr);
             this.Controls.Add(this.rad_lf);
             this.Controls.Add(this.rad_crlf);
@@ -198,6 +210,7 @@
             this.KeyPreview = true;
             this.Name = "MainForm";
             this.Text = "Struts2-045-Exp 乁(๑˙ω˙๑乁)";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,6 +233,7 @@
         private System.Windows.Forms.RadioButton rad_crlf;
         private System.Windows.Forms.RadioButton rad_lf;
         private System.Windows.Forms.RadioButton rad_cr;
+        private System.Windows.Forms.ComboBox cmb_encoding;
     }
 }
 

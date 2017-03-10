@@ -12,7 +12,7 @@ I'll write "README.md" and comment of code as well as I can.   //QAQ
 
 以后也许能用到，稍微修改即可（手动滑稽
 
-# Feature
+# Fuctions
 
 √ Support Multiline Command (Can "cd" into any directory and then run command)
 
@@ -25,8 +25,6 @@ I'll write "README.md" and comment of code as well as I can.   //QAQ
 √ Content-Type Preview
 
 # Known Problems
-
-Encoding problem 返回乱码 （发送与接收的字符集格式化）
 
 命令中包含注释导致不执行
 
@@ -44,7 +42,10 @@ Logging
 
 爬虫PoC扫描
 
+# 版本号定义
+
+主版本.次版本.修订.编译
 
 
 
-# I'm tired. Go to sleep. 3/10/2017 5:57 UTC+8
+# Can't go asleep. 3/11/2017 4:59 UTC+8

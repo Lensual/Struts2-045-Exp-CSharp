@@ -56,9 +56,11 @@ namespace Struts2_045_Exp
                     response = (HttpWebResponse)ex.Response;  //404
                 }
 
-                //get result
-                StreamReader reader = new StreamReader(response.GetResponseStream());
-                string result = reader.ReadToEnd();
+                //get bytes
+                byte[] buffer = ReadStream(response.GetResponseStream());
+
+                //encoding convert & get string
+                String result = Encoding.GetEncoding((string)cmb_encoding.SelectedItem).GetString(buffer);
 
                 //format CR LF
                 if (rad_lf.Checked)
@@ -85,6 +87,24 @@ namespace Struts2_045_Exp
                 btn_send.Enabled = true;
             }
             
+        }
+
+        private byte[] ReadStream(Stream stream)
+        {
+            List<byte> buffer = new List<byte>();
+            int b;
+            while (true)
+            {
+                b = stream.ReadByte();
+                if (b != -1)
+                {
+                    buffer.Add((byte)b);
+                }
+                else
+                {
+                    return buffer.ToArray();
+                }
+            }
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -122,5 +142,14 @@ namespace Struts2_045_Exp
             }
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            foreach (EncodingInfo enInfo in Encoding.GetEncodings())
+            {
+                cmb_encoding.Items.Add(enInfo.Name);
+            }
+            cmb_encoding.SelectedItem = "utf-8";
+            
+        }
     }
 }
