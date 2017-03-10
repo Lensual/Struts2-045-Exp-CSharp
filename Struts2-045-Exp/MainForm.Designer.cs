@@ -148,22 +148,22 @@
             // rad_crlf
             // 
             this.rad_crlf.AutoSize = true;
-            this.rad_crlf.Checked = true;
             this.rad_crlf.Location = new System.Drawing.Point(57, 299);
             this.rad_crlf.Name = "rad_crlf";
             this.rad_crlf.Size = new System.Drawing.Size(47, 16);
             this.rad_crlf.TabIndex = 11;
-            this.rad_crlf.TabStop = true;
             this.rad_crlf.Text = "CRLF";
             this.rad_crlf.UseVisualStyleBackColor = true;
             // 
             // rad_lf
             // 
             this.rad_lf.AutoSize = true;
+            this.rad_lf.Checked = true;
             this.rad_lf.Location = new System.Drawing.Point(110, 299);
             this.rad_lf.Name = "rad_lf";
             this.rad_lf.Size = new System.Drawing.Size(35, 16);
             this.rad_lf.TabIndex = 12;
+            this.rad_lf.TabStop = true;
             this.rad_lf.Text = "LF";
             this.rad_lf.UseVisualStyleBackColor = true;
             // 
