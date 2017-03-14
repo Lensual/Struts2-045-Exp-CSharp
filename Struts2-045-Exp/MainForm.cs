@@ -42,7 +42,7 @@ namespace Struts2_045_Exp
             {
                 //generate request
                 HttpWebRequest request = HttpWebRequest.CreateHttp(@txt_url.Text);
-                request.Timeout = 5000;
+                request.Timeout = Convert.ToInt32(txt_timeout.Text);
                 request.ContentType = @txt_preview.Text;
 
                 //get response
