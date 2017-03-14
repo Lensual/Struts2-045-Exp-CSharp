@@ -1,4 +1,6 @@
-# Struts2-045-Exp
+# Struts2-045-Exp-CSharp
+
+**Exp code reference from [Flyteas/Struts2-045-Exp](https://github.com/Flyteas/Struts2-045-Exp).**
 
 **Development with C# WinForm. Just for study and programming excercises.**
 
@@ -48,4 +50,4 @@ Logging
 
 
 
-# Can't go asleep. 3/11/2017 4:59 UTC+8
+# Nyan~ 3/14/2017 17:20 UTC+8
