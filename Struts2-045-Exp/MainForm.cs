@@ -189,5 +189,15 @@ namespace Struts2_045_Exp
                 e.Handled = true;
             }
         }
+
+        private void anyTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //fix Need not input character, when press Ctrl-Enter in a textbox.
+            //Only KeyPress event can cancel input.
+            if ( e.KeyChar == '\n' && Control.ModifierKeys == Keys.Control)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
