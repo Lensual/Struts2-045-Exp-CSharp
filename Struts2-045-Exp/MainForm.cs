@@ -19,7 +19,7 @@ namespace Struts2_045_Exp
         {
             InitializeComponent();
         }
-
+        byte[] buffer = new byte[0];
         private void btn_send_Click(object sender, EventArgs e)
         {
             //check url
@@ -58,23 +58,10 @@ namespace Struts2_045_Exp
                 }
 
                 //get bytes
-                byte[] buffer = ReadStream(response.GetResponseStream());
+                buffer = ReadStream(response.GetResponseStream());
 
-                //encoding convert & get string
-                String result = Encoding.GetEncoding((string)cmb_encoding.SelectedItem).GetString(buffer);
-
-                //format CR LF
-                if (rad_lf.Checked)
-                {
-                    result = result.Replace("\n", "\r\n");  //format LF(Unix) -> CRLF(Windows)
-                }
-                else if (rad_cr.Checked)
-                {
-                    result = result.Replace("\r", "\r\n");  //format CR(MAC) -> CRLF(Windows)
-                }
-
-                //display result
-                txt_result.Text = result;
+                //display
+                UpdateResultText(null, null);
             }
             catch (Exception ex)
             {
@@ -154,6 +141,44 @@ namespace Struts2_045_Exp
             }
             cmb_encoding.SelectedItem = "utf-8";
             
+            //reg event
+            this.cmb_encoding.TextChanged += new System.EventHandler(this.UpdateResultText);
         }
+
+        private void UpdateResultText(object sender, EventArgs e)
+        {
+            //if txt_result is error report
+            if (txt_result.ForeColor == Color.Red)
+            {
+                return;
+            }
+
+            //encoding convert & get string
+            String result = Encoding.GetEncoding((string)cmb_encoding.SelectedItem).GetString(buffer);
+
+            //format CR LF
+            if (rad_lf.Checked)
+            {
+                result = result.Replace("\n", "\r\n");  //format LF(Unix) -> CRLF(Windows)
+            }
+            else if (rad_cr.Checked)
+            {
+                result = result.Replace("\r", "\r\n");  //format CR(MAC) -> CRLF(Windows)
+            }
+
+            //display result
+            txt_result.Text = result;
+        }
+
+
+        private void CrlfSelect_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((RadioButton)sender).Checked)
+            {
+                UpdateResultText(null, null);
+            }
+        }
+
+
     }
 }

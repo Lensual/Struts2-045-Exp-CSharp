@@ -154,6 +154,7 @@
             this.rad_crlf.TabIndex = 11;
             this.rad_crlf.Text = "CRLF";
             this.rad_crlf.UseVisualStyleBackColor = true;
+            this.rad_crlf.CheckedChanged += new System.EventHandler(this.CrlfSelect_CheckedChanged);
             // 
             // rad_lf
             // 
@@ -166,6 +167,7 @@
             this.rad_lf.TabStop = true;
             this.rad_lf.Text = "LF";
             this.rad_lf.UseVisualStyleBackColor = true;
+            this.rad_lf.CheckedChanged += new System.EventHandler(this.CrlfSelect_CheckedChanged);
             // 
             // rad_cr
             // 
@@ -176,6 +178,7 @@
             this.rad_cr.TabIndex = 13;
             this.rad_cr.Text = "CR";
             this.rad_cr.UseVisualStyleBackColor = true;
+            this.rad_cr.CheckedChanged += new System.EventHandler(this.CrlfSelect_CheckedChanged);
             // 
             // cmb_encoding
             // 
