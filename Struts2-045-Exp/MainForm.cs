@@ -100,6 +100,7 @@ namespace Struts2_045_Exp
             if (e.Control && e.KeyCode == Keys.Enter && btn_send.Enabled)
             {
                 btn_send_Click(sender, e);
+                e.Handled = true;
             }
         }
 
@@ -179,6 +180,14 @@ namespace Struts2_045_Exp
             }
         }
 
-
+        private void anyTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            //fix Can't select all text, when press Ctrl-A in a textbox.
+            if (e.Control && e.KeyCode == Keys.A)
+            {
+                ((TextBox)sender).SelectAll();
+                e.Handled = true;
+            }
+        }
     }
 }

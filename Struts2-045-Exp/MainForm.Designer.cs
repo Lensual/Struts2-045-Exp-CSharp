@@ -61,6 +61,7 @@
             this.txt_result.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txt_result.Size = new System.Drawing.Size(1026, 321);
             this.txt_result.TabIndex = 1;
+            this.txt_result.KeyDown += new System.Windows.Forms.KeyEventHandler(this.anyTextBox_KeyDown);
             // 
             // txt_cmd
             // 
@@ -71,6 +72,7 @@
             this.txt_cmd.Size = new System.Drawing.Size(510, 184);
             this.txt_cmd.TabIndex = 2;
             this.txt_cmd.TextChanged += new System.EventHandler(this.txt_cmd_TextChanged);
+            this.txt_cmd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.anyTextBox_KeyDown);
             // 
             // txt_preview
             // 
@@ -81,6 +83,7 @@
             this.txt_preview.Size = new System.Drawing.Size(510, 184);
             this.txt_preview.TabIndex = 3;
             this.txt_preview.Text = resources.GetString("txt_preview.Text");
+            this.txt_preview.KeyDown += new System.Windows.Forms.KeyEventHandler(this.anyTextBox_KeyDown);
             // 
             // btn_send
             // 
